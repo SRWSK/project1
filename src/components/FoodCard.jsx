@@ -1,49 +1,46 @@
-function FoodCard({ food }) {
+function FoodCard({food}){
 
-  return (
+return(
+<div className="card">
 
-    <div className="card">
-
-      <img
-        src={`${import.meta.env.BASE_URL}${food.image}`}
-        alt={food.name}
-      />
-
-
-      <div className="card-body">
-
-        <h2>
-          {food.name}
-        </h2>
+<img
+src={`${import.meta.env.BASE_URL}${food.image}`}
+alt={food.name}
+/>
 
 
-        <p>
-          {food.description}
-        </p>
+<div className="card-body">
+
+<h2>
+{food.name}
+</h2>
 
 
-        <p>
-          📍 {food.location}
-        </p>
+<p>
+{food.description}
+</p>
 
 
-        <a
-          className="map-btn"
-          href={food.mapUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ดูแผนที่
-        </a>
+<p>
+📍 {food.location}
+</p>
 
 
-      </div>
+<a
+className="map-btn"
+href={food.mapUrl}
+target="_blank"
+rel="noreferrer"
+>
+ดูแผนที่
+</a>
 
-    </div>
 
-  );
+</div>
+
+</div>
+)
 
 }
-
 
 export default FoodCard;
